@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.capstoneproject.R;
+
 public class RegisActivity extends AppCompatActivity {
 
     @Override

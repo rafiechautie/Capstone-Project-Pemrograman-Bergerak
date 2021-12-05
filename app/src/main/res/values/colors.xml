@@ -11,5 +11,6 @@
     //color yang dibuat sendiri
     <color name="colorPrimary">#004242</color>
     <color name="colorPrimaryDark">#002E2E</color>
-    <color name="colorAccent">#038A8A</color>g
+    <color name="colorAccent">#038A8A</color>
+    <color name="colorRating">#FBC02D</color>
 </resources>

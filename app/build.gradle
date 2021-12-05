@@ -51,4 +51,9 @@ dependencies {
     implementation 'com.github.florent37:diagonallayout:1.0.9'
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
     implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+
+    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
 }
+apply plugin: 'com.google.gms.google-services'

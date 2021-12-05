@@ -13,6 +13,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.capstoneproject.activity.MainActivity;
+
 public class splashScreen extends AppCompatActivity {
 
     SharedPreferences onBoardingScreen;

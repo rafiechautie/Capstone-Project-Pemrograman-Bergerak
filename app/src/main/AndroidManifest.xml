@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".onboarding.onboarding"
+            android:exported="true" />
+        <activity
+            android:name=".activity.RegisActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true" />
         <activity
             android:name=".splashScreen"

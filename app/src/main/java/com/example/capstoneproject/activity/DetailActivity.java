@@ -2,7 +2,9 @@ package com.example.capstoneproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -24,6 +26,7 @@ public class DetailActivity extends AppCompatActivity {
     RatingBar nilaiFilmBar;
     Result result;
     double nilai, populer;
+    ImageView buttonBack;
     Integer vote;
     Boolean adult, vidio;
     String language;
@@ -37,14 +40,24 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         //ambil layoutnya
-        tanggalRilis = findViewById(R.id.tanggalRilis);
-        popularitasFilm = findViewById(R.id.popularitasFilm);
+        buttonBack = findViewById(R.id.buttonBack);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonBack = findViewById(R.id.buttonBack);
         filmStory = findViewById(R.id.filmStory);
         imgFilmDetail = findViewById(R.id.imgFilmDetail);
         judulFilm = findViewById(R.id.judulFilm);
         nilaiFilm = findViewById(R.id.nilaiFilm);
         nilaiFilmBar = findViewById(R.id.nilaiFilmBar);
         imgFilmBackground = findViewById(R.id.imgFilmBackground);
+
+
 
 
         result = getIntent().getParcelableExtra(EXTRA_MOVIE);
@@ -56,19 +69,14 @@ public class DetailActivity extends AppCompatActivity {
         imageBackgroundDetail = result.getPosterPath();
         rilisFilm = result.getReleaseDate();
         story = result.getOverview();
-        //populer = result.getPopularity();
-        vote = result.getVoteCount();
-        adult = result.getAdult();
-        vidio = result.getVideo();
-        language = result.getOriginalLanguage();
-        genre = result.getGenreIds();
+
 
 
         //tarok data api di aplikasi
         nilaiFilm.setText(nilai + "/10");
         judulFilm.setText(title);
         filmStory.setText(story);
-        tanggalRilis.setText(rilisFilm);
+
 
 
         //rating film dalam bentuk bintang
@@ -96,5 +104,6 @@ public class DetailActivity extends AppCompatActivity {
         // Tombol Arah panah balik
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
 
 }

@@ -19,6 +19,8 @@ import com.example.capstoneproject.onboarding.onboarding;
 
 public class splashScreen extends AppCompatActivity {
 
+    //test
+
     SharedPreferences onBoardingScreen;
     Animation top_animation;
     ImageView image;

@@ -43,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //tangkap layout notifikasi
+        notifikasi = findViewById(R.id.notifikasi);
+        notifikasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerview = findViewById(R.id.moviePopular);
         recyclerview.setHasFixedSize(true);

@@ -3,14 +3,19 @@ package com.example.capstoneproject.onboarding;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.capstoneproject.R;
+import com.example.capstoneproject.activity.LoginActivity;
 import com.example.capstoneproject.adapter.SliderAdapter;
 
 public class onboarding extends AppCompatActivity {
@@ -96,7 +101,7 @@ public class onboarding extends AppCompatActivity {
                 letsGetStarted.setVisibility(View.INVISIBLE);
             }else
             {
-                animation = AnimationUtils.loadAnimation(onBoarding1Activity.this, R.anim.bottom_anim);
+                animation = AnimationUtils.loadAnimation(onboarding.this, R.anim.bottom_anim);
                 letsGetStarted.setAnimation(animation);
                 letsGetStarted.setVisibility(View.VISIBLE);
             }

@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper{
+
+    //comment
+
     public static final String database_name = "db_login";
     public static final String table_name = "table_login";
 

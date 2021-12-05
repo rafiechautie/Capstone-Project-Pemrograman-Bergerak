@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.capstoneproject.activity.LoginActivity;
 import com.example.capstoneproject.activity.MainActivity;
 import com.example.capstoneproject.onboarding.onboarding;
 
@@ -66,7 +67,7 @@ public class splashScreen extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }else {
-                    Intent intent = new Intent(splashScreen.this, MainActivity.class);
+                    Intent intent = new Intent(splashScreen.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }

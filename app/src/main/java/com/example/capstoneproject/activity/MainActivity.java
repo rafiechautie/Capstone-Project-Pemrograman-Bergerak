@@ -28,7 +28,6 @@ import retrofit2.Callback;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerMoviesAdapter adapter;
-
     private TextView username;
     String API_KEY = "dd7c30cbeb58edd0347801dfc5453354";
     String LANGUAGE = "en-US";
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerview;
     ImageView notifikasi;
     DBHelper dbHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.capstoneproject.R;
+
 public class SliderAdapter extends PagerAdapter {
     Context context;
     LayoutInflater layoutInflater;

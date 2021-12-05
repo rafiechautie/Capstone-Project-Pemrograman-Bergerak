@@ -1,11 +1,13 @@
 package com.example.capstoneproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         recyclerview = findViewById(R.id.moviePopular);
         recyclerview.setHasFixedSize(true);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
 
         username = findViewById(R.id.username);
         username.getText();
+
 
 
 

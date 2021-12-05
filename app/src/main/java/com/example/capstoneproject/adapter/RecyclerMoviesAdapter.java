@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.capstoneproject.R;
+
 import com.example.capstoneproject.activity.DetailActivity;
 import com.example.capstoneproject.model.Result;
 

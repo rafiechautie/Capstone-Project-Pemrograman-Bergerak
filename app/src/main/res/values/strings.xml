@@ -1,15 +1,21 @@
 <resources>
     <string name="app_name">Capstone Project</string>
+    <string name="skip_onBoarding">Skip</string>
+    <string name="onBoarding_next">next</string>
 
     <!-- onboarding 1-->
     <string name="text_onBoarding1">Nonton dimana saja</string>
     <string name="desc_onBoarding1">Bisa menonton\ndimanapun dan kapanpun</string>
 
-    <!--    onboarding 2-->
+    <!-- onboarding 2-->
     <string name="text_onBoarding2">Menikmati Hidup 24 Jam</string>
     <string name="desc_onBoarding2">Nikmati hidupmu\n dengan film film terbaik</string>
 
-    <!--    onboarding 3-->
+    <!-- onboarding 3-->
     <string name="text_onBoarding3">Film Terupdate dan Terbaik</string>
     <string name="desc_onBoarding3">Menyediakan film terbaik di seluruh penjuru dunia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="20dp"
     tools:context=".onboarding.onboarding">
 
     <androidx.viewpager.widget.ViewPager
@@ -16,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
-
 
 
     </androidx.viewpager.widget.ViewPager>

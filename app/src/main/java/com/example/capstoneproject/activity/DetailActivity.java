@@ -8,6 +8,8 @@ import com.example.capstoneproject.R;
 
 public class DetailActivity extends AppCompatActivity {
 
+    public static String EXTRA_MOVIE;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

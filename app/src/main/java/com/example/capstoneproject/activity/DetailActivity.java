@@ -8,6 +8,8 @@ import com.example.capstoneproject.R;
 
 public class DetailActivity extends AppCompatActivity {
 
+    //test
+
     public static String EXTRA_MOVIE;
 
     @Override

@@ -54,9 +54,22 @@ public class splashScreen extends AppCompatActivity {
                 onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
                 boolean isFirstTime = onBoardingScreen.getBoolean("firstTime", true);
 
-                Intent intent = new Intent(splashScreen.this, onboarding.class);
-                startActivity(intent);
-                finish();
+                if (isFirstTime)
+                {
+
+                    SharedPreferences.Editor editor = onBoardingScreen.edit();
+                    editor.putBoolean("firstTime", false);
+                    editor.commit();
+
+                    //setelah loading akan berpindah ke halaman onboarding1
+                    Intent intent = new Intent(splashScreen.this, onboarding.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    Intent intent = new Intent(splashScreen.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
 
 
             }

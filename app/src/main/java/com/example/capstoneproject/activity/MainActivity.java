@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerview;
     ImageView notifikasi;
     DBHelper dbHelper;
-
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,35 @@ public class MainActivity extends AppCompatActivity {
         username.getText();
 
 
+        searchView = findViewById(R.id.cariFilm);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (newText.length() > 1){
+                    ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
+                    Call<Response> call = apiInterface.getQuery(API_KEY,LANGUAGE,newText,PAGE);
+                    call.enqueue(new Callback<Response>() {
+                        @Override
+                        public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                            List<Result> mList = response.body().getResults();
+                            adapter = new RecyclerMoviesAdapter(MainActivity.this, mList);
+                            recyclerview.setAdapter(adapter);
+                        }
+
+                        @Override
+                        public void onFailure(Call<Response> call, Throwable t) {
+                            t.fillInStackTrace();
+                        }
+                    });
+                }
+                return true;
+            }
+        });
 
 
 

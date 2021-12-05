@@ -3,6 +3,7 @@ package com.example.capstoneproject.rest;
 import com.example.capstoneproject.config.ServerConfig;
 
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 

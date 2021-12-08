@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String CATEGORY = "popular";
     int PAGE = 1;
     RecyclerView recyclerview;
-    ImageView notifikasi;
+    ImageView setting;
     DBHelper dbHelper;
     private SearchView searchView;
 
@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //tangkap layout notifikasi
-        notifikasi = findViewById(R.id.notifikasi);
-        notifikasi.setOnClickListener(new View.OnClickListener() {
+        setting = findViewById(R.id.notifikasi);
+        setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });
